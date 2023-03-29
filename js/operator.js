@@ -20,17 +20,19 @@ console.log(1 ** 1); // exponentiation
 // 3. Increment and decrement operators (++ 증가/ -- 감소)
 let iCounter = 2;
 const preIncrement = ++iCounter;
+// 먼저 피연산자의 값을 1 증가시킨 후에 해당 연산을 진행함.
 // counter = counter + 1;
 // preIncrement = counter;
 console.log(`preIncrement: ${preIncrement}, counter: ${iCounter}`);
 const postIncrement = iCounter++;
+//먼저 해당 연산을 수행하고 나서, 피연산자의 값을 1 증가시킴.
 // postIncrement = counter;
 // counter = counter + 1;
 console.log(`postIncrement: ${postIncrement}, counter: ${iCounter}`);
 let dCounter = 2;
 const preDecrement = --dCounter;
 console.log(`postIncrement: ${preDecrement}, counter: ${dCounter}`);
-const postDecrement = dCounter--;
+const postDecrement = dCounter--; //할당 후, 업데이트
 console.log(`postIncrement: ${postDecrement}, counter: ${dCounter}`);
 
 // 4. Assingment operators
@@ -52,10 +54,16 @@ const value1 = true;
 const value2 = 4 < 2;
 
 // ||(or), finds the first truthy value
-console.log(`or: ${value1 || value2 || check()}`);
+console.log(`or: ${value1 || value2 || check()}`); //true
 
 // &&(and), finds the first falsy value
-console.log(`and: ${value1 && value2 && check()}`);
+console.log(`and: ${value1 && value2 && check()}`); //false
+
+// often used to compress long if-statement
+// nullableObject && nullableObject.something
+// if (nullableObject != null) {
+//   nullableObject.something;
+// }
 
 // [TIP] Heavy Operation 일수록 뒤에 작성하기
 function check() {
@@ -118,16 +126,16 @@ console.log(guest === "effy" ? "yes" : "no");
 // use for multiple type checks in TS
 const browser = "IE";
 switch (browser) {
-    case "IE":
-        console.log("Go Away!");
-        break;
-    case "Chrome":
-    case "Firefox":
-        console.log("Love you");
-        break;
-    default:
-        console.log("Love you");
-        break;
+  case "IE":
+    console.log("Go Away!");
+    break;
+  case "Chrome":
+  case "Firefox":
+    console.log("Love you");
+    break;
+  default:
+    console.log("Love you");
+    break;
 }
 
 // 11. Loops
@@ -135,49 +143,48 @@ switch (browser) {
 // body code is executed.
 let i = 3;
 while (i > 0) {
-    console.log(`while: ${i}`);
-    i--;
+  console.log(`while: ${i}`);
+  i--;
 }
 
 // do while loop, body code is executed first,
-// then check the condition. 
+// then check the condition.
 // > 블럭을 먼저 실행 후  조건이 맞는지 안 맞는지 확인
 let j = 0;
 do {
-    console.log(`do while: ${i}`);
-    j--;
+  console.log(`do while: ${i}`);
+  j--;
 } while (j > 0); // 무조건 조건 한번 실행.
 
 // for loop, for(begin; condition; step)
-for (i = 3; i > 0; i--){
-    console.log(`for: ${i}`);
+for (i = 3; i > 0; i--) {
+  console.log(`for: ${i}`);
 }
-for (let i = 3; i > 0; i = i - 2){
-    // inline variable declaration
-    console.log(`inline variable for: ${i}`);
+for (let i = 3; i > 0; i = i - 2) {
+  // inline variable declaration
+  console.log(`inline variable for: ${i}`);
 }
 
 // nestend loops
-for (let i = 0; i < 10; i++){
-    for (let j = 0; j < 10; j++){
-        console.log(`i: ${i}, j:${j}`);
-    }
+for (let i = 0; i < 10; i++) {
+  for (let j = 0; j < 10; j++) {
+    console.log(`i: ${i}, j:${j}`);
+  }
 }
 
 // break, continue
 // Q1. iterate from 0 to 10 and print only even numbers (use continue)
-for (let i = 0; i <= 11; i++){
-    if (i % 2 === 0) {
-        console.log(`q1 : ${i}`);
-    } else {
-        continue;
-    }
+for (let i = 0; i < 11; i++) {
+  if (i % 2 !== 0) {
+    continue;
+  }
+  console.log(`q1 : ${i}`);
 }
 
 // Q2. iterate from 0 to 10 and print numbers until reaching 8(use break)
-for (let i = 0; i < 10; i++){
-    if (i > 8) {
-        break;
-    }
-    console.log(`q2 : ${i}`);
+for (let j = 0; j <= 10; j++) {
+  if (j > 8) {
+    break;
+  }
+  console.log(`q2 : ${j}`);
 }
