@@ -7,18 +7,18 @@
 // - introduced in ES6
 // - syntactical sugar over prototype-based inheritance
 
-// 1. Class declarations
+// 1. Class declaration
 class Person {
-  // -- constructor --
+  // constructor
   constructor(name, age) {
-    // -- fields --
+    //fields <= properties
     this.name = name;
     this.age = age;
   }
 
-  //-- methods --
+  // methods
   speak() {
-    console.log(`${this.name}: hello`);
+    console.log(`${this.name}: hello!`);
   }
 }
 
@@ -35,12 +35,12 @@ class User {
     this.age = age;
   }
   get age() {
-    return this._age;
+    return this.age;
   }
   set age(value) {
-    //     if (value < 0) {
-    //       throw Error("age can not be negative");
-    //     }
+    // if (value < 0) {
+    //   throw Error("age can not be negative");
+    // }
     this._age = value < 0 ? 0 : value;
   }
 }
@@ -77,7 +77,7 @@ console.log(Article.publisher); // effy
 Article.printPublisher(); // effy
 // <---- 들어오는 데이터와 상관없이 공통으로 쓰는 데이터라면, Static and Static Data 사용 : 메모리 사용 감소
 
-// 5. Inheritance
+// 5. Inheritance 상속 & 다양성
 // a way for one class to extend another class.
 class Shape {
   constructor(width, height, color) {
@@ -98,7 +98,7 @@ class Shape {
 class Rectangle extends Shape {}
 class Triangle extends Shape {
   draw() {
-    super.draw();
+    super.draw(); // overwrithing 했지만, super로 부모 프로퍼티 불러옴
     console.log("🚩");
   }
   getArea() {
