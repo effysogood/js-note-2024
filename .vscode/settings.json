@@ -1,3 +1,19 @@
 {
-  "liveServer.settings.port": 5501
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.port": 5501,
+    "prettier.useEditorConfig": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tokenColorCustomizations": {
+        "comments": "#FFE9EE"
+    },
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "~/../css"
+        }
+    ]
 }
