@@ -17,7 +17,7 @@ console.log(MAX_FRUITS);
 // 2. 재할당 불가능한 상수변수 또는 변수
 // Unreassignable
 // Mutable
-let apple = {
+const apple = {
     name: 'apple',
     color: 'red',
     display: '🍎',

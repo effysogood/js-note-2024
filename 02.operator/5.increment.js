@@ -32,3 +32,7 @@ let l = 5;
 let m = l-- + 2 + --l;
 console.log(l); // l은 현재 값이 3.
 console.log(m); // 4+2+4 출력 값이 10.
+
+let o = 2;
+let p = o++;
+console.log(p);
