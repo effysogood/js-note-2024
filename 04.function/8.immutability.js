@@ -6,7 +6,7 @@
 // 객체값 -> 참조에 의한 복사 (메모리 주소)
 
 function display(num) {
-    num = 5; // ❌ 내부에서 변경 절대 불가!
+    num = 5; // ❌ 내부에서 재할당 절대 불가!
     console.log(num); // <-- 지역변수에 할당
 }
 const value = 4;
@@ -21,7 +21,8 @@ function displayObj(obj) {
 const effy = { name: 'effy' };
 displayObj(effy);
 
-// --> Better Case
+// --> GOOD Case
 function changeName(obj) {
-    return { ...obj, name: 'chang' };
+    // 이름부터 변경하는 느낌을 주도록!
+    return { ...obj, name: 'chang' }; // 반환할때는 새로운 오브젝트 만들기!
 }
