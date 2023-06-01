@@ -26,3 +26,15 @@ console.log(apple['emoji']);
 // 속성 삭제
 delete apple.emoji;
 console.log(apple); // emoji는 삭제됨
+
+// -------------------
+const myCar = new Object();
+myCar.make = 'Ford';
+myCar.model = 'Mustang';
+myCar.year = 1969;
+
+const myCar2 = {
+    make: 'Ford',
+    model: 'Mustang',
+    year: 1969,
+};
