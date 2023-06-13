@@ -39,3 +39,17 @@ apple.display();
 const obj = {
     key: 'value',
 };
+
+// -------- Practice
+class Friends {
+    constructor(name, emoji) {
+        this.name = name;
+        this.emoji = emoji;
+    }
+    display = () => {
+        console.log(`${this.name} : ${this.emoji}`);
+    };
+}
+
+const chang = new Friends('chang', '🤪');
+chang.display();
