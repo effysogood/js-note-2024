@@ -46,23 +46,16 @@ const obj = {
   key: 'value',
 };
 
-// -------------> Practice
-
-class Person {
-  constructor(name, age, gender, nationality) {
+// -------- Practice
+class Friends {
+  constructor(name, emoji) {
     this.name = name;
-    this.age = age;
-    this.gender = gender;
-    this.nationality = nationality;
+    this.emoji = emoji;
   }
   display = () => {
-    console.log(
-      `${this.name} is ${this.age} years old. And ${this.gender}'s from ${this.nationality}`
-    );
+    console.log(`${this.name} : ${this.emoji}`);
   };
 }
 
-const myBoyFriend = new Person('Chang An', 29, 'He', 'Canada');
-console.log(myBoyFriend.name);
-console.log(myBoyFriend.age);
-myBoyFriend.display();
+const chang = new Friends('chang', '🤪');
+chang.display();
