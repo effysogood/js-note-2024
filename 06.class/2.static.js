@@ -1,28 +1,36 @@
-// static 정적 프로퍼티, 메서드
+// static 정적 프로퍼티, 메소드
+// --> class 레벨의 프로퍼티와 메소드
+// --> static 키워드 사용 시, 만들어진 instance에 사용이 되는 것이 아닌
+//     해당 class에만 그대로 남아있게 됨 (class에서 딱! 한번만 만들어지게 됨)
+// --> 그래서, 호출 시에도 class명(레벨에서) 호출해야 함!
+
 class Fruit {
-    static MAX_FRUITS = 4;
+  static MAX_FRUITS = 4;
 
-    constructor(name, emoji) {
-        this.name = name;
-        this.emoji = emoji;
-    }
+  constructor(name, emoji) {
+    this.name = name;
+    this.emoji = emoji;
+  }
 
-    // 클래스 레벨의 메서드
-    static makeRandomFruit() {
-        // 클래스 레벨의 메서드에서는 this를 참조할 수 없음
-        return new Fruit('banana', '🍌');
-    }
+  // 클래스 레벨의 메서드
+  static makeRandomFruit() {
+    // 클래스 레벨의 메서드에서는 this를 참조할 수 없음
+    // 주어진 키워드가 없기 때문, class는 아무것도 채워지지 않은 template 이기에.
+    return new Fruit('banana', '🍌');
+  }
 
-    // 인스턴스 레벨의 메서드
-    display = () => {
-        console.log(`${this.name}: ${this.emoji}`);
-    };
+  // 인스턴스 레벨의 메서드, 만들어진 인스턴스와 밀접하게 연관
+  display = () => {
+    console.log(`${this.name}: ${this.emoji}`);
+  };
 }
 
+// 클래스 레벨의 함수는 클래스 이름으로 접근이 가능
 const banana = Fruit.makeRandomFruit();
 console.log(banana);
-console.log(Fruit.MAX_FRUITS);
+console.log(Fruit.MAX_FRUITS); // static, class 레벨에서 호출해야함
 
+// apple은 Fruit 클래스의 인스턴스이다.
 const apple = new Fruit('apple', '🍎');
 const orange = new Fruit('orange', '🍊');
 
