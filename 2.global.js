@@ -16,6 +16,7 @@ console.log(parseFloat('12.34')); // 문자 -> 숫자로 변환, 12.34
 console.log(parseInt('12.34')); // 문자 -> 정수로 변환, 12
 
 // URL (URI, Uniform Resource Identifier 하위 개념)
+// URI로 데이터를 전달하기 위해서 문자열을 인코딩, string, 인코딩된 문자열을 반환
 // 아스키 문자로만 구성되어야 함
 // 한글이나 특수 문자는 이스케이프 처리 해야한다.
 const URL = 'https://에피.com';
