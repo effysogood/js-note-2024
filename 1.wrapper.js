@@ -11,3 +11,5 @@ const text = 'text'; // string 문자열 원시타입
 console.log(text);
 text.length; // String 객체
 text.trim();
+
+// static은 'class 이름'만을 통해서 만들 수 있는것, instance methods는 객체를 생성해 접근 가능
