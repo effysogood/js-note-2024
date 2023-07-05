@@ -15,7 +15,8 @@ function makeIterable(initialValue, maxValue, callback) {
         },
     };
 }
-const multiple = makeIterable(0, 20, (n) => n * 2);
+
+const multiple = makeIterable(0, 10, (n) => n * 2);
 for (const num of multiple) {
     console.log(num);
 }
