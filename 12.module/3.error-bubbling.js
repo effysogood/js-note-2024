@@ -16,3 +16,4 @@ try {
 } catch (error) {
     console.log('Catched!');
 }
+console.log();
