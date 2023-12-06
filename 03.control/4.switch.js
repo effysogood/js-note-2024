@@ -1,7 +1,8 @@
 // 조건문 Conditional Statement
 // switch
-// if else if else if else ... else
+// ㄴ if else if else if else ... else
 // 정해진 범위 안에 값에 대해 특정한 일을 해야 하는 경우
+// 프로그램이 표현식을 평가한 후, 그 값과 case 레이블의 값을 비교해 일치하는 명령문 실행
 
 let day = 5;
 let dayName;
@@ -29,7 +30,7 @@ switch (day) {
         dayName = '일요일';
         break;
     default:
-        console.log('해당하는 요일이 없음!');
+        console.log('해당 하는 요일이 없음');
 }
 console.log(dayName);
 
@@ -46,3 +47,18 @@ switch (condition) {
         break;
 }
 console.log(text);
+
+const fruit = 'Bananas';
+let noti = '';
+switch (fruit) {
+    case 'Bananas':
+        noti = 'Bananas are $0.5 a dollar.';
+        break;
+    case 'Mangoes':
+    case 'Papayas':
+        noti = 'Mangoes and papayas are $2.5 a dollar.';
+        break;
+    default:
+        console.log(`Sorry, we are out of ${fruit}`);
+}
+console.log(noti);

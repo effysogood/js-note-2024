@@ -21,12 +21,12 @@ for (let i = 0; i < 5; i++) {
 // for (;;) {
 // }
 
-// 반복문 제어 : continue, break
+// 반복문 제어 break & continue
 for (let i = 0; i < 20; i++) {
     if (i === 10) {
-        console.log('i가 드디어 10이 되었다!');
-        break;
-        continue;
+        console.log('드디어 10이 되었다!');
+        break; // <- 10에서 멈춤
+        continue; // <- 출력 후, 계속 출력
     }
     console.log(i);
 }

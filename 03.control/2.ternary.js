@@ -1,9 +1,7 @@
-// 삼항 조건 연산자 Tenary Operator
+// 삼항 조건 연산자 Ternary Operator
 
 /**
- * false                ▼
  * 조건식 ? 참인 경우 : 거짓인 경우
- * true      ▲
  */
 
 let fruit = 'apple';
@@ -16,7 +14,7 @@ if (fruit === 'apple') {
     console.log('👿');
 }
 
-fruit === 'apple' ? console.log('🍎') : console.log('🌻');
+fruit === 'apple' ? console.log('🍎') : console.log('🍊');
 
-let emoji = fruit === 'apple' ? '🍎' : '🌻';
+let emoji = fruit === 'apple' ? console.log('🍎') : console.log('🍊');
 console.log(emoji);

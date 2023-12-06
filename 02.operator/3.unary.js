@@ -22,7 +22,10 @@ console.log(boolean); // true
 console.log(!boolean); // false
 console.log(!!boolean); // true
 
-// + 숫자가 아닌 타입들을 숫자로 변환하면 어떤값이 나오는지 확인할 수 있음
+// !! : 값을 boolean으로 변환
+console.log(!!1); // ! 부정연산자를 두번 부정 시, 원래의 boolean 값이 나오게 됨
+
+// + 숫자가 아닌 타입들을 숫자로 변환하면 어떤 값이 나오는지 확인할 수 있음
 console.clear();
 console.log(+false); // 0
 console.log(+null); // 0
@@ -30,6 +33,3 @@ console.log(+''); // 0
 console.log(+true); // 1
 console.log(+'text'); // NaN
 console.log(+undefined); // NaN
-
-console.log(!!1); // ! 부정연산자
-// !! 값을 boolean 타입으로 변환함 (두번 부정, 원래의 boolean 값이 나오게 됨)
