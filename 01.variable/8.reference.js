@@ -2,6 +2,7 @@
 // 값과 참조
 
 // 원시 타입은 값(Value)이 복사되어 전달됨
+// Copy By Value
 let a = 1;
 let b = a; // 1
 b = 2;
@@ -9,9 +10,11 @@ console.log(a); // 1
 console.log(b); // 2
 
 // 객체 타입은 참조값(메모리 주소, Reference)가 복사되어 전달됨
+// Copy By Reference
 let apple = {
     name: '사과',
 };
+
 let orange = apple; // 0x1234 -> 메모리의 주소값이 복사되어 저장
 orange.name = '오렌지';
 console.log(apple);
