@@ -1,3 +1,7 @@
+// 객체 Object
+// 복합 데이터
+// {key : value}
+
 let name = 'apple';
 let color = 'red';
 let display = '🍎';
