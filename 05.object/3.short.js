@@ -6,7 +6,9 @@ console.log(coordinate);
 
 function makeObj(name, age) {
     return {
-        name, // name: name,
-        age, // age: age,
+        name,
+        age,
     };
 }
+let effy = makeObj('effy', 28);
+console.log(effy);
