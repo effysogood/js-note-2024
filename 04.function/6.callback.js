@@ -1,6 +1,6 @@
 /**
- * 일급객체(함수) first-class object
- * : (함수가) 일반 객체처럼 모든 연산이 가능한 것
+ * 일급 함수 first-class function
+ * : 함수가 일반 객체처럼 모든 연산이 가능한 것
  * - 함수의 매개변수로 전달
  * - 함수의 반환값
  * - 할당 명령문
@@ -27,14 +27,24 @@ const multiply = (a, b) => a * b;
 // ↗️ 함수(action)를 인자로 받는 '고차 함수 Higher Ordered Function'
 // ↗️ 여기서 action은 Call Back 함수
 function calculator(a, b, action) {
-  if (a < 0 || b < 0) {
-    return;
-  }
-  let result = action(a, b);
-  console.log(result);
-  return result;
+    if (a < 0 || b < 0) {
+        return;
+    }
+    let result = action(a, b);
+    console.log(result);
+    return result;
 }
 
 calculator(1, 2, add); // <-- 참조값(주소)를 전달, call back
 calculator(1, 2, multiply);
-calculator(-1, -2, multiply); // 호출되지 않음 (0보다 작은 수 조건 불충족)
+calculator(-1, -2, multiply); // 호출되지 않음 (0보다 작은 수로 조건 불충족)
+
+function calc(a, b, action) {
+    if (a < 5 || b < 5) {
+        return;
+    }
+    let result = action(a, b);
+    console.log(`calc : ${result}`);
+    return result;
+}
+calc(1, 1, add);

@@ -1,8 +1,8 @@
 // return 반환
-// return을 명시적으로 하지 않으면, 자동으로 undefined이 반환됨!
+// return을 명시적으로 작성하지 않으면, 자동으로 undefined이 반환됨!
 
 function add(a, b) {
-  return a + b;
+    return a + b;
 }
 const result = add(1, 2);
 console.log(result);
@@ -13,11 +13,9 @@ console.log(result);
 //    인자가 유효한지 여부 미리 확인하여, 불필요한 일 방지!
 
 function print(num) {
-  if (num < 0) {
-    return; // return undefined를 반환하는 것과 동일.
-  }
-  console.log(num);
+    if (num < 0) {
+        return; // <- return undefined 반환하는 것과 동일
+    }
+    console.log(num);
 }
-
-print(10);
-print(-10);
+print(10); // 호출 필요 없음

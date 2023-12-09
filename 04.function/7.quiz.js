@@ -4,19 +4,13 @@
 // 5, 순회하는 숫자의 두배값을 다 출력하고 싶음
 // Hint! function iterate(max, action)
 
-let MAX_NUMBER = 5;
-const log = (num) => console.log(num);
-const doubleAndLog = (num) => console.log(num * 2);
-
 function iterate(max, action) {
-  for (let i = 0; i < max; i++) {
-    action(i);
-  }
+    for (let i = 0; i <= max; i++) {
+        action(i);
+    }
 }
 
-iterate(MAX_NUMBER, log);
-iterate(MAX_NUMBER, doubleAndLog);
+const print = (num) => console.log(num);
+const printDouble = (num) => console.log(num * 2);
 
-setTimeout(() => {
-  console.log(`3초 뒤에 출력됨 :)`);
-}, 3000);
+iterate(6, printDouble);
