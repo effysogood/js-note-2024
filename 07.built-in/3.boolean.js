@@ -1,9 +1,11 @@
 // Boolean
-const isTrue = true; // new Boolean(true);
+const isTrue = true;
+// => const isTrue = new Boolean(true);
 console.log(isTrue.valueOf());
 
 /**
  * Falsy
+ * false
  * 0
  * -0
  * null
@@ -11,6 +13,7 @@ console.log(isTrue.valueOf());
  * undefined
  * ''
  */
+
 const bNoParam = new Boolean();
 const bZero = new Boolean(0);
 const bNull = new Boolean(null);
@@ -19,6 +22,7 @@ const bFalse = new Boolean(false);
 
 /**
  * Truthy
+ * true
  * 1
  * -1
  * '0'
@@ -26,6 +30,7 @@ const bFalse = new Boolean(false);
  * []
  * {}
  */
+
 const bTrue = new Boolean(true);
 const bTrueString = new Boolean('true');
 const bFlaseString = new Boolean('false');

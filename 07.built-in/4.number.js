@@ -5,8 +5,8 @@ const num2 = new Number(123);
 console.log(typeof num1);
 console.log(typeof num2);
 
-// 정수에서 출력할 수 있는 가장 큰 수
-console.log(Number.MAX_VALUE); //e+308 = 10의 308승
+// Static Properties, 클래스 레벨에서 접근 가능
+console.log(Number.MAX_VALUE); // 정수에서 출력할 수 있는 가장 큰 수, e+308 = 10의 308승
 console.log(Number.MIN_VALUE);
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(Number.MIN_SAFE_INTEGER);
