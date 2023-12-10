@@ -5,30 +5,29 @@
 // --> 그래서, 호출 시에도 class명(레벨에서) 호출해야 함!
 
 class Fruit {
-  static MAX_FRUITS = 4;
+    static MAX_FRUITS = 4;
 
-  constructor(name, emoji) {
-    this.name = name;
-    this.emoji = emoji;
-  }
+    constructor(name, emoji) {
+        this.name = name;
+        this.emoji = emoji;
+    }
 
-  // 클래스 레벨의 메서드
-  static makeRandomFruit() {
-    // 클래스 레벨의 메서드에서는 this를 참조할 수 없음 (class는 데이터가 채워져 있지 않은 template 상태)
-    //
-    return new Fruit('banana', '🍌');
-  }
+    // 클래스 레벨의 메서드
+    static makeRandomFruit() {
+        // 클래스 레벨의 메서드에서는 this를 참조할 수 없음
+        // 클래스는 데이터가 채워 있지 않은 template 상태이기 때문.
+        return new Fruit('banana', '🍌');
+    }
 
-  // 인스턴스 레벨의 메서드
-  display = () => {
-    console.log(`${this.name}: ${this.emoji}`);
-  };
+    // 인스턴스 레벨의 메서드
+    display = () => {
+        console.log(`${this.name}: ${this.emoji}`);
+    };
 }
 
-// 클래스 레벨의 함수는 클래스 이름으로 접근이 가능
-const banana = Fruit.makeRandomFruit();
+const banana = Fruit.makeRandomFruit(); // 클래스 레벨의 함수는 클래스 이름으로 접근이 가능
 console.log(banana);
-console.log(Fruit.MAX_FRUITS); // static, class 레벨에서 호출해야함
+console.log(Fruit.MAX_FRUITS); // static 프로퍼티이기에 class 레벨에서만 출력 가능
 
 // apple은 Fruit 클래스의 인스턴스이다.
 const apple = new Fruit('apple', '🍎');

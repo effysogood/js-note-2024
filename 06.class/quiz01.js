@@ -2,7 +2,7 @@
 // 0 이상의 값으로 초기화 한 뒤 하나씩 증가할 수 있는 카운터를 만들기
 // Counter 클래스 만들기
 
-class Counter01 {
+class Counter {
     #value;
     constructor(startValue) {
         if (isNaN(startValue) || startValue < 0) {
@@ -12,17 +12,17 @@ class Counter01 {
         }
     }
     get value() {
-        // 접근 제어자로 private 필드 값을 불러옴, 읽기만 가능
-        return this.#value;
+        return this.#value; // 접근 제어자로 private 필드 값을 불러옴, 읽기만 가능
     }
     increment = () => {
         this.#value++;
     };
 }
-const counter01 = new Counter01(-2);
-counter01.increment(); // 1
-counter01.increment(); // 2
-console.log(counter01.value);
+
+const counter = new Counter(0);
+counter.increment(); // 1
+counter.increment(); // 2
+console.log(counter.value);
 
 class Counter02 {
     #count;
@@ -33,12 +33,13 @@ class Counter02 {
         return this.#count;
     }
     increment = () => {
-        this.#count += 1;
+        this.#count++;
     };
-    descrement = () => {
-        this.#count -= 1;
+    decrement = () => {
+        this.#count--;
     };
 }
+
 const counter02 = new Counter02(-5);
 counter02.increment();
 console.log(counter02.value);
