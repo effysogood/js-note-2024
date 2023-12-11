@@ -29,9 +29,11 @@ console.log(text.toUpperCase());
 console.log(text.toLowerCase());
 
 // 문자열 자르기
+// string.substring(시작점, 분할횟수)
 console.log(text.substring(0, 2)); // 'He'
 
 // 문자열 삭제
+// string.slice(시작점/분할횟수)
 console.log(text.slice(3)); // 'lo World'
 console.log(text.slice(-3)); // 'rld'
 

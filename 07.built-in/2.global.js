@@ -8,7 +8,7 @@ console.log(undefined);
 
 eval('const num = 2; console.log(num)'); // --> 문자이지만 JS로 평가해서 출력
 console.log(isFinite(1)); // 숫자가 유한한지 확인, true
-console.log(isFinite(Infinity));
+console.log(isFinite(Infinity)); // false
 
 console.log(parseFloat('12.43')); // 실수로 변환
 console.log(parseInt('12.43')); // 정수로 변환
