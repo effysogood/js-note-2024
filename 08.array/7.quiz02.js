@@ -45,7 +45,7 @@ console.log(matchResult);
 // QUIZ04
 // 5이상(보다 큰)의 숫자들의 평균
 const nums = [3, 16, 5, 25, 4, 34, 21];
-const averageResult = nums //
-    .filter((num) => num > 5) // [16 ,25, 34, 21];
+const average = nums //
+    .filter((num) => num > 5)
     .reduce((avg, num, _, array) => avg + num / array.length, 0);
-console.log(averageResult);
+console.log(average);
