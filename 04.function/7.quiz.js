@@ -13,4 +13,5 @@ function iterate(max, action) {
 const print = (num) => console.log(num);
 const printDouble = (num) => console.log(num * 2);
 
-iterate(6, printDouble);
+iterate(5, print);
+iterate(5, printDouble);

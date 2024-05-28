@@ -12,20 +12,20 @@
 
 // Case01
 function sum(a, b) {
-  console.log("👍 function test 👍");
-  return a + b;
+    console.log('👍 function test 👍');
+    return a + b;
 }
 
 const result = sum(1, 2);
 console.log(result);
 
 // Case02
-let lastName = "김";
-let firstName = "지수";
+let lastName = '김';
+let firstName = '지수';
 let fullName = `${lastName} ${firstName}`;
 console.log(fullName);
 
 function printName(lastName, firstName) {
-  return `${lastName} ${firstName} ✋`;
+    return `${lastName} ${firstName} ✋`;
 }
-console.log(printName("Choi", "Saeyoung"));
+console.log(printName('Choi', 'Saeyoung'));
