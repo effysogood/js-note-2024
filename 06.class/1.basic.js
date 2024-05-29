@@ -26,7 +26,7 @@ class Fruits {
     }
 
     // 생성자 밖에서 함수를 정의 (생성자 내에서 작성 가능하기는 함)
-    // this.를 붙이지 않고, "이름만 작성", function 키워드도 앞에 붙이지 않음
+    // this.를 붙이지 않고, "함수의 이름만 작성", function 키워드도 앞에 붙이지 않음
     display = () => {
         console.log(`${this.name}: ${this.emoji}`);
     };

@@ -20,7 +20,7 @@ class Employee {
 class FullTimeEmployee extends Employee {
     static #PAY_RATE = 10000;
     constructor(name, dept, hoursPerMonth) {
-        super(name, dept, hoursPerMonth, FullTimeEmployee.#PAY_RATE);
+        super(name, dept, hoursPerMonth, FullTimeEmployee.#PAY_RATE); // 정적 프로퍼티를 사용했으므로 클래스 키워드로 호출해야함.
     }
 }
 
