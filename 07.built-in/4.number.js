@@ -1,9 +1,9 @@
 // Number 숫자 관련 함수들
 
 const num1 = 123;
-const num2 = new Number(123);
-console.log(typeof num1);
-console.log(typeof num2);
+const num2 = new Number(123); // << 메모리 낭비
+console.log(typeof num1); // number
+console.log(typeof num2); // object
 
 // Static Properties, 클래스 레벨에서 접근 가능
 console.log(Number.MAX_VALUE); // 정수에서 출력할 수 있는 가장 큰 수, e+308 = 10의 308승
@@ -29,7 +29,7 @@ console.log(num3.toExponential());
 
 // 반올림하여 문자열로 반환
 const num4 = 1234.82;
-console.log(num4.toFixed()); // 실수 -> 정수
+console.log(num4.toFixed()); // 실수 -> 정수 1235
 console.log(num4.toString()); // 숫자 -> 문자
 console.log(num4.toLocaleString('ar-EG')); // 언어에 따른 숫자표기법 변환 (*Arab)
 

@@ -47,3 +47,4 @@ const longText = 'Get to the, point';
 console.log(longText.split(' '));
 console.log(longText.split(' ', 2));
 console.log(longText.split(', '));
+console.log(longText.split('')); // 각각 분할
