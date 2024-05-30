@@ -18,6 +18,7 @@ console.log(anotherArray);
 
 // 4. 배열 전달
 // Creates an array from an iterable(순회 가능한) obj
+// 이터러블 객체로부터 배열 생성(복제) 가능
 array = Array.from(anotherArray); // 복제
 console.log(array);
 

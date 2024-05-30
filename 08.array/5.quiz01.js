@@ -4,17 +4,18 @@
 // output: [ '🍌', '🥝', '🍇', '🥝' ]
 
 const replace = (array, from, to) => {
-    const replaced = Array.from(array);
+    let replaced = Array.from(array);
     for (let i = 0; i < replaced.length; i++) {
-        if (replaced[i] === from) {
-            replaced[i] = to;
-        }
+        // if (replaced[i] === from) {
+        //     replaced[i] = to;
+        // }
+        replaced[i] = replaced[i] === from ? to : replaced[i];
     }
     return replaced;
 };
-const input01 = ['🍌', '🍓', '🍇', '🍓'];
-const replacedResult = replace(input01, '🍓', '🥝');
-console.log(replacedResult);
+const replaceInput = ['🍌', '🍓', '🍇', '🍓'];
+const replaceResult = replace(replaceInput, '🍓', '🥝');
+console.log(replaceResult); // 배열로 반환
 
 // QUIZ 02:
 // 배열과 특정한 요소를 전달받아,
@@ -31,6 +32,7 @@ const count = (array, item) => {
     }
     return counter;
 };
+
 const input02 = ['🍌', '🥝', '🍇', '🥝'];
 const countResult = count(input02, '🥝');
 console.log(countResult);

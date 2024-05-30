@@ -32,12 +32,12 @@ console.log(fruits);
 console.log(lastItem);
 
 // 중간에 추가 또는 삭제
-// splice(start: number, deleteCount?: number);
+// splice(start: number, deleteCount?: number, ...items: []);
 const deleted = fruits.splice(1, 1);
-console.log(fruits);
-console.log(deleted);
-fruits.splice(1, 0, '🍌', '🍉');
-console.log(fruits);
+console.log('splice01 : ', fruits);
+console.log('splice02-deleted : ', deleted);
+fruits.splice(1, 0, '🍌', '🍉'); // 추가할 아이템
+console.log('splice03 : ', fruits);
 
 // <----------------- 배열 자체를 수정, 업데이트 ENDS
 
@@ -70,11 +70,11 @@ let overlapArr = [
 console.log(overlapArr);
 console.log(overlapArr.flat()); // Default) 1단계까지만 Flat 가능
 console.log(overlapArr.flat(2)); // Option) 값을 지정해줄 수 있음
+const arr5 = overlapArr.flat(2);
 
 // .fill()
 // 특정한 값으로 배열을 채우기
-const arr5 = overlapArr.flat(2);
-arr5.fill('0', 1, 3); // 배열 자체를 수정
+arr5.fill('0', 0, 2); // 배열 자체를 수정
 console.log(arr5);
 
 arr5.fill('a', 3);
