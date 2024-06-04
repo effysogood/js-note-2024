@@ -7,11 +7,12 @@ const obj1 = { name: '🐶' };
 const obj2 = { name: '🐱', owner: 'effy' };
 
 // 조건문 내부 평가 (boolean)
-if (obj1 || obj2) {
+if (obj1 && obj2) {
     console.log('Both are true!');
 }
 
 // 조건문 밖, 단축 평가
+// true나 false로 평가하지 않고, 할당함!
 let result = obj1 && obj2; // 마지막 조건(true)이 할당
 console.log(result);
 
@@ -44,6 +45,18 @@ obj2.owner || makeNewOwner(obj2);
 console.log(obj1);
 console.log(obj2);
 
+const expect = (val) => {
+    const throwError = (errorStr) => {
+        throw new Error(errorStr);
+    };
+
+    return {
+        // 단축 평가 활용 예제 덧붙임 (from leetCode)
+        toBe: (expected) => expected === val || throwError('Not Equal'),
+        notToBe: (expected) => expected !== val || throwError('Equal'),
+    };
+};
+
 // null 또는 undefined인 경우를 확인할 때
 let item; // = { price: 1 };
 const price = item && item.price;
@@ -56,7 +69,9 @@ function print(message) {
     const text = message || 'Hello';
     console.log(text);
 }
-print();
-print(undefined);
-print(null);
-print(0);
+
+// falsy한 값들
+print(); // Hello
+print(undefined); // Hello
+print(null); // Hello
+print(0); // Hello
