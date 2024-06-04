@@ -29,7 +29,7 @@ arr = [...fruits1, ...fruits2];
 console.log(arr);
 
 // Object
-const effy = { name: 'effy', age: 20 };
+const effy = { name: 'effy', age: 20, etc: { hobby: 'baking' } };
 const updated = {
     ...effy,
     job: 's/w engineer',

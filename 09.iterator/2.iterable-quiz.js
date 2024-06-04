@@ -8,8 +8,10 @@ const multiple = {
         const max = 10;
         let num = 0;
         return {
+            // iterator 객체를 반환
             next() {
-                return { value: num++ * 2, done: num > max };
+                // iterator 객체 내에는 next() 함수 존재
+                return { value: num++ * 2, done: num > max }; // 그리고 next()를 호출할 때 마다 value, done을 리턴
             },
         };
     },

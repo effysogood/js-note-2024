@@ -1,4 +1,4 @@
-/** Iterable 하다는 건! 순회가 가능한다는 것
+/** Iterable 하다는 건! 순회가 가능하다는 것
  * Interable Protocol(규격 사항)을 따르고 있음
  * --> [Symbol.iterator](): Iterator;
  * 심볼 정의를 가진 객체나 특정한 함수가 Iterator를 리턴한다는 것은
@@ -9,8 +9,12 @@
 
 // for ... of
 const array = [1, 2, 3];
+
+for (const item of array) {
+    console.log(item); // value 반환
+}
 for (const item of array.keys()) {
-    console.log(item);
+    console.log(item); // key 반환
 }
 
 // for ... in : key 값을 출력

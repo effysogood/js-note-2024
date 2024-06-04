@@ -1,5 +1,4 @@
-// Generator
-// 생성기 : 값을 생성할 수 있는
+// Generator 생성기 (값을 생성할 수 있는)
 // 직접 구현할 일은 거의 없음
 
 function* multipleGenerator() {
@@ -13,7 +12,7 @@ function* multipleGenerator() {
     }
 }
 // 사용자가 원하는 때까지 기다렸다가 호출 시, 하나씩 리턴
-// 사용자에게 양도권을 제어
+// 사용자에게 제어권을 양도
 
 const multiple = multipleGenerator();
 let next = multiple.next();
