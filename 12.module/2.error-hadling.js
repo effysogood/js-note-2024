@@ -1,7 +1,7 @@
 // try catch finally
 
 function readFile(path) {
-    throw new Error('파일 경로를 찾을 수 없음');
+    // throw new Error('파일 경로를 찾을 수 없음');
     return '파일의 내용';
 }
 
