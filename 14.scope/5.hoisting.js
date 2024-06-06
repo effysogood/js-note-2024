@@ -17,7 +17,7 @@ function print() {
 // 변수(let, const)와 class는 선언만 호이스팅이 되고,
 // 초기화는 안 됨!!!
 // 초기화 전, 변수에 접근하면 컴파일(빌드) 에러 발생
-console.log(hi);
+console.log(hi); // ❌ crashed
 const hi = 'hi';
 const func1 = function () {}; // 마찬가지로 변수 내 선언
 
