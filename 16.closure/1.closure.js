@@ -4,7 +4,7 @@ A closure is the combination of a function bundled together
 In other words, a closure gives you access to an outer function's scope from an inner function
 
 클로저는 함수와 함수를 감싸고 있는 환경 조합, 함수 묶음과 그 주변 상태(렉시컬 환경)에 대한 참조를 결합한 것
-즉, 클로저를 사용하면 내부 함수에서 외부 함수의 (상태) 범위에 액세스 가능
+즉, 클로저를 사용하면 내부 함수에서 외부 함수의 스코프에 접근 가능
 */
 
 const text = 'hello';
