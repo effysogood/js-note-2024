@@ -1,0 +1,17 @@
+{
+  "liveServer.settings.donotShowInfoMsg": true,
+  "liveServer.settings.port": 5501,
+  "prettier.useEditorConfig": false,
+  "prettier.singleQuote": true,
+  "prettier.tabWidth": 4,
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.tokenColorCustomizations": {
+    "comments": "#FFE9EE"
+  },
+  "git.ignoreLimitWarning": true
+}
